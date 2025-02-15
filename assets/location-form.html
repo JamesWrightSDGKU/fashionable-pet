@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="locationFormTemplate">
+        <form>
+            <input type="text" id="textNewLocationName">
+            <fieldset id="newLocationAddress">
+                <input type="text" id="textNewLocationStreetName">
+                <input type="text" id="textNewLocationStreetNumber">
+                <input type="text" id="textNewLocationUnit">
+                <input type="text" id="textNewLocationPostalCode">
+                <input type="text" id="textNewLocationState">
+                <input type="text" id="textNewLocationCountry">
+            </fieldset>
+            <fieldset id="newLocationOperatingHours" hidden="true">
+                <table>
+                    <caption>
+                        Check the day box to enable opening and closing inputs.
+                        For 24-hr operation, leave opening and closing inputs blank.
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Opening Time</th>
+                            <th scope="col">Closing Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <input type="checkbox" id="newLocationMonday" name="monday"><label for="monday">Monday</label>
+                            <input type="time" id="newLocationMondayOpen" step="1800">
+                            <input type="time" id="newLocationMondayClose" step="1800">
+                        </tr>
+                        <tr>
+                            <input type="checkbox" id="newLocationTuesday" name="tuesday"><label for="tuesday">Tuesday</label>
+                            <input type="time" id="newLocationTuesdayOpen" step="1800">
+                            <input type="time" id="newLocationTuesdayClose" step="1800">
+                        </tr>
+                        <tr>
+                            <input type="checkbox" id="newLocationWednesday" name="wednesday"><label for="wednesday">Wednesday</label>
+                            <input type="time" id="newLocationWednesdayOpen" step="1800">
+                            <input type="time" id="newLocationWednesdayClose" step="1800">
+                        </tr>
+                        <tr>
+                            <input type="checkbox" id="newLocationThursday" name="thursday"><label for="monday">Thursday</label>
+                            <input type="time" id="newLocationThursdayOpen" step="1800">
+                            <input type="time" id="newLocationThursdayClose" step="1800">
+                        </tr>
+                        <tr>
+                            <input type="checkbox" id="newLocationFriday" name="friday"><label for="friday">Friday</label>
+                            <input type="time" id="newLocationFridayOpen" step="1800">
+                            <input type="time" id="newLocationFridayClose" step="1800">
+                        </tr>
+                        <tr>
+                            <input type="checkbox" id="newLocationSaturday" name="saturday"><label for="saturday">Saturday</label>
+                            <input type="time" id="newLocationSaturdayOpen" step="1800">
+                            <input type="time" id="newLocationSaturdayClose" step="1800">
+                        </tr>
+                        <tr>
+                            <input type="checkbox" id="newLocationSunday" name="sunday"><label for="Sunday">Monday</label>
+                            <input type="time" id="newLocationSundayOpen" step="1800">
+                            <input type="time" id="newLocationMondayClose" step="1800">
+                        </tr>
+                    </tbody>                
+                </table>
+            </fieldset>
+            <button id="buttonAddOperatingHours">Configure Operating Hours</button>
+            <button id="buttonAddSalonLocation">Add Location</button>
+        </form>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> <!-- jQuery Library -->
+    <script src="../scripts/locations.js"></script>
+</body>
+</html>
